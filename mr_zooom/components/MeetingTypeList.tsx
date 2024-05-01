@@ -3,9 +3,9 @@
 import React, { useState } from "react";
 import HomeCard from "./HomeCard";
 import { useRouter } from "next/navigation";
-import { Router } from "lucide-react";
+// import { Router } from "lucide-react";
 import MeetingModal from "./MeetingModal";
-
+import { Router } from "next/router";
 
 function MeetingTypeList() {
   const [meetingState, setmeetingState] = useState<
