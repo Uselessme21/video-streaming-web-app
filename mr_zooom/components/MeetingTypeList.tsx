@@ -3,14 +3,15 @@
 import React, { useState } from "react";
 import HomeCard from "./HomeCard";
 import { useRouter } from "next/navigation";
-// import { Router } from "lucide-react";
+
 import MeetingModal from "./MeetingModal";
-import { Router } from "next/router";
+
 
 function MeetingTypeList() {
   const [meetingState, setmeetingState] = useState<
     "isScheduledMeet" | "isJoiningMeet" | "isInstantMeet" | undefined
   >();
+  const router = useRouter();
   const createMeeting=()=>{}
   return (
     <section className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
@@ -25,7 +26,7 @@ function MeetingTypeList() {
         img="/icons/recordings.svg"
         title="Your Recordings"
         description="See Your Recordings"
-        handleClick={() =>Router.push('/recordings')}
+        handleClick={() =>router.push('/recordings')}
         className="bg-blue-1"
       />
       <HomeCard
